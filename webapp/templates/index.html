@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ScrapeFlex</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>ScrapeFlex</h1>
+    <form action="/" method="post">
+        <label for="url">Enter the URL of the website to scrape:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Scrape</button>
+    </form>
+    {% if data %}
+        <h2>Scraped Data:</h2>
+        <pre>{{ data }}</pre>
+    {% endif %}
+</body>
+</html>
